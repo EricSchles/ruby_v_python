@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+  <% if name %>
+  <p> Hello there, <%= name %></p>
+  <% else %>
+  <%= name %>
+  <p> Hello there, folks</p>
+  
+  <% end %>
+</body>
+</html>
