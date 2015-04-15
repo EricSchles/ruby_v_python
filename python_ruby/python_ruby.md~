@@ -1,6 +1,6 @@
 #Intro
 
-Python and Ruby maybe two of the most ubitiquos and easy to use scripting languages written thus far, with other notables including [Lua], [Julia], [Haskell], and [JavaScript].
+Python and Ruby maybe two of the most ubitiquos and easy to use scripting languages written thus far, with other notables including [Lua](http://www.lua.org/), [Julia](http://julialang.org/), [Haskell](https://www.haskell.org/), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript).
 
 ##Getting started
 
@@ -8,13 +8,13 @@ Python and Ruby maybe two of the most ubitiquos and easy to use scripting langua
 
 Installing Ruby and Python are extremely easy
 
-* [Ruby Install]()
-* [Python Install]()
+* [Ruby Install](https://www.ruby-lang.org/en/documentation/installation/)
+* [Python Install](https://www.python.org/downloads/)
 
 Both come with wonderful package managers to get the latest and greatest libraries, for each language:
 
-* [Gem Install]()
-* [Pip Install]()
+* [Gem Install](https://rubygems.org/pages/download)
+* [Pip Install](https://pip.pypa.io/en/latest/installing.html)
 
 ###Hello World
 
@@ -64,15 +64,113 @@ Let's see assignment in action:
 ####Ruby
 
 `x = 5` - Assigning a number to a variable
+
 `y = "Hello"` - Assigning a string to a variable
+
 `z = true` - Assigning a boolean to a variable
 
 ####Python
+
 `x = 5` - Assigning a number to a variable
+
 `y = "Hello"` - Assigning a number to a variable
+
 `z = True` - Assigning a number to a variable
 
-If these two sets of statements appear similar, they should.  There is a right way to do assignment, and Python and Ruby more or less agree on this.  In fact, Ruby and Python are so similar it's possible to write code that will transform one language to another, which just happens to be a [pet project]() of mine.
+If these two sets of statements appear similar, they should.  There is a right way to do assignment, and Python and Ruby more or less agree on this.  In fact, Ruby and Python are so similar it's possible to write code that will transform one language to another, which just happens to be a [pet project](https://github.com/EricSchles/generalizedCompiler) of mine.
+
+###Functions in Ruby and Python
+
+Another great way Ruby and Python are similar is in creating functions:
+
+####Functions in Ruby and Python
+
+Making a function in Ruby only requires a def keyword and an end statement, in Python, only a def statement is required.  
+
+#####Ruby:
+```
+def hello
+  puts "Hello there"
+end
+hello() #prints "Hello there"
+```
+#####Python:
+```
+def hello():
+    print "Hello there"
+hello() #prints "Hello there"
+```
+
+Notice that python requires () even without parameters, whereas ruby does not.
+
+We can also create functions that accept parameters:
+
+#####Ruby:
+```
+def hi(greeting)
+  puts greeting
+end
+hi("Hi there")
+```
+#####Python:
+```
+def hi(greeting):
+    print greeting
+hi("Hi there")
+```
+
+Here greeting acts as the passed in variable.
+
+We can also have optional parameters:
+
+#####Ruby:
+```
+def hey(greeting="hey")
+  puts greeting
+end
+hey() #prints hey
+hey("what's up")#prints what's up
+```
+#####Python:
+```
+def hey(greeting="hey"):
+    print greeting
+hey()
+hey("what's up")
+```
+
+Here we define default behavior for the function, which allows us to pass parameters, only if we want to.  This is extremely powerful if a user might need to pass in a variable, but only under special circumstances.
+
+We are now in a place to expand our definition of assignment.  Just as we passed data, we can also pass _functions_ to other functions:
+
+#####Ruby:
+```
+class Add
+  def adder(x,y)
+    return x+y
+  end
+end
+
+adder = Add.new
+adding = adder.method(:adder)
+puts adding.call(5,6)
+```
+#####Python:
+```
+def adder(x,y):
+    return x+y
+adding = adder
+print adding(5,6)
+```
+The Ruby code is likely not optimized, as I'm not much of a ruby programmer.  There is probably a native way to pass functions, without needing to wrap it in a class, but I don't know how to do this.  If the class doesn't make sense yet, don't worry we'll be talking about those next.
+
+The important take away is that we defined a method adder and then changed it's name to adding, without redefining the function.  This means, the function's name is meaningless, but only what it does matters.  An extremely powerful result for a number of use cases, and expanded definition of what it means to _assign_ _things_.  Now assignment means something more than just passing data around, or that functions _are_ data.  Either way, it's a very different way of thinking.
+
+
+
+
+
+
 
 ###Advanced usage of assignment
 

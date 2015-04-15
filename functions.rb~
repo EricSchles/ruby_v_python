@@ -1,0 +1,24 @@
+def hello
+  puts "Hello there"
+end
+
+def hi(greeting)
+  puts greeting
+end
+
+def hey(greeting="hey")
+  puts greeting
+end
+
+def adder(x,y)
+  return x+y
+end
+
+adding = adder(x,)
+
+#Testing everything out:
+hello()
+hi("hi there")
+hey("what's up")
+hey()
+puts adding(5,6)
