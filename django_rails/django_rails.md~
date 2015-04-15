@@ -142,4 +142,10 @@ And point your browser at:
 
 You can now freely add topics as you please.
 
-While Rails makes things, very very easy, that's not always the best thing, it's a choice.  Rails made a TON of decisions for you, so if you want to do things the way Rails wants you to, it's very easy, but doing anything else, means a lot of fighting with the framework.  Django gives you more control, but that means you have to do more work on your own.  Neither is correct, but both have advantages and drawbacks.  
+While Rails makes things, very very easy, that's not always the best thing, it's a choice.  Rails made a TON of decisions for you, so if you want to do things the way Rails wants you to, it's very easy, but doing anything else, means a lot of fighting with the framework.  Django gives you more control, but that means you have to do more work on your own.  Neither is correct, but both have advantages and drawbacks.  For someone that knows either framework well, they'll be able to accomplish the exact same thing, but in different, often very different ways.
+
+##References/going further:
+
+Please check out these great tutorials for more:
+
+[RoR](http://docs.railsbridge.org/intro-to-rails/intro-to-rails)

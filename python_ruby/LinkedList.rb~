@@ -1,0 +1,10 @@
+class Node
+  def initialize(data,next=nil)
+    @data = data
+    @next = next
+  end
+end
+
+head = Node.new(0)
+head.next = Node.new(1)
+print head.next
