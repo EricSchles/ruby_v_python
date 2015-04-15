@@ -64,12 +64,17 @@ Let's see assignment in action:
 ####Ruby
 
 `x = 5` - Assigning a number to a variable
+
 `y = "Hello"` - Assigning a string to a variable
+
 `z = true` - Assigning a boolean to a variable
 
 ####Python
+
 `x = 5` - Assigning a number to a variable
+
 `y = "Hello"` - Assigning a number to a variable
+
 `z = True` - Assigning a number to a variable
 
 If these two sets of statements appear similar, they should.  There is a right way to do assignment, and Python and Ruby more or less agree on this.  In fact, Ruby and Python are so similar it's possible to write code that will transform one language to another, which just happens to be a [pet project]() of mine.

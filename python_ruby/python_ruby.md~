@@ -81,6 +81,7 @@ Now that we understand assignment, let's make use of it to do something _really_
  
 ####Linked List in Python
 
+```
 class Node:
     def __init__(self,data,next=None):
         self.data = data
@@ -105,8 +106,7 @@ cur = head
 while cur:
     print cur
     cur = cur.next
-
-
+```
 
 
 
