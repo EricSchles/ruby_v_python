@@ -170,9 +170,68 @@ The important take away is that we defined a method adder and then changed it's 
 
 The last thing to cover is objects in both languages, then we'll be ready to have some fun!
 
-#####R
+#####Ruby
+
+```
+class Hello
+  attr_accessor :thing
+  def initialize(thing)
+    @thing = thing
+  end
+
+  def get
+    return @thing
+  end
+
+  def set(x)
+    @thing = x
+  end
+end
+
+class HelloThere < Hello
+  def concatenate(x)
+    @thing += x
+  end
+end
 
 
+hi = Hello.new("hi")
+puts hi.get
+hi.set("hello")
+puts hi.get
+
+hi_t = HelloThere.new("Hi")
+hi_t.concatenate(" there")
+puts hi_t.get
+```
+
+And the equivalent code in Python:
+
+```
+class Hello:
+    def __init__(self,thing):
+        self.thing = thing
+
+    def get(self):
+        return self.thing
+
+    def set(self,x):
+        self.thing = x
+
+class HelloThere(Hello):
+
+    def concatenate(self,x):
+        self.thing += x
+
+hi = Hello("hi")
+print hi.get()
+hi.set("hello")
+print hi.get()
+
+hi_t = HelloThere("Hi")
+hi_t.concatenate(" there")
+print hi_t.get()
+```
 
 ###Advanced usage of assignment
 
@@ -208,5 +267,37 @@ while cur:
     cur = cur.next
 ```
 
+And in Ruby:
 
+```
+class Node
+  attr_accessor :data, :next_
+  def initialize(data,next_ = nil)
+    @data = data
+    @next_ = next_
+  end
+  def to_s
+    return @data.to_s
+  end
+end
+
+#basic example
+head = Node.new(0)
+head.next_ = Node.new(1)
+puts head.next_
+
+head = Node.new(0)
+cur = head
+for i in 0..10000
+  new_node = Node.new(i)
+  cur.next_ = new_node
+  cur = cur.next_
+end
+
+cur = head
+while cur
+  puts cur
+  cur = cur.next_
+end
+```
 
