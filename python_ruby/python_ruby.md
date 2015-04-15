@@ -83,8 +83,6 @@ If these two sets of statements appear similar, they should.  There is a right w
 
 Another great way Ruby and Python are similar is in creating functions:
 
-####Functions in Ruby and Python
-
 Making a function in Ruby only requires a def keyword and an end statement, in Python, only a def statement is required.  
 
 #####Ruby:
@@ -168,8 +166,11 @@ The Ruby code is likely not optimized, as I'm not much of a ruby programmer.  Th
 The important take away is that we defined a method adder and then changed it's name to adding, without redefining the function.  This means, the function's name is meaningless, but only what it does matters.  An extremely powerful result for a number of use cases, and expanded definition of what it means to _assign_ _things_.  Now assignment means something more than just passing data around, or that functions _are_ data.  Either way, it's a very different way of thinking.
 
 
+###Objects in Python and Ruby
 
+The last thing to cover is objects in both languages, then we'll be ready to have some fun!
 
+#####R
 
 
 

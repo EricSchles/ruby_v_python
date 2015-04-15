@@ -1,0 +1,19 @@
+class Hello
+  attr_accessor :thing
+  def intialize(thing)
+    @thing = thing
+  end
+
+  def get
+    return @thing
+  end
+
+  def set(x)
+    @thing = x
+  end
+end
+
+hi = Hello.new("hi")
+puts hi.get
+hi.set("hello")
+puts hi.get

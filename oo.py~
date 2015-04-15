@@ -1,0 +1,16 @@
+class Hello:
+    def __init__(self,thing):
+        self.thing = thing
+
+    def get(self):
+        return self.thing
+
+    def set(self,x):
+        self.thing = x
+
+class HelloThere(Hello):
+
+    def __init__(self):
+        self.super()
+    def concatenate(x):
+        self.thing = 
